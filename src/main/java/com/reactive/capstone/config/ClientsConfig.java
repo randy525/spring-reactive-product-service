@@ -3,7 +3,6 @@ package com.reactive.capstone.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpHeaders;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
@@ -19,7 +18,6 @@ public class ClientsConfig {
     public WebClient orderSearchServiceWebClient() {
         return WebClient.builder()
                 .baseUrl(orderSearchServiceUrl)
-                .defaultHeader(HttpHeaders.ACCEPT, "application/json")
                 .build();
     }
 
@@ -27,7 +25,6 @@ public class ClientsConfig {
     public WebClient productInfoServiceWebClient() {
         return WebClient.builder()
                 .baseUrl(productInfoServiceUrl)
-                .defaultHeader(HttpHeaders.ACCEPT, "application/json")
                 .build();
     }
 

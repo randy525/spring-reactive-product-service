@@ -1,4 +1,4 @@
-package com.reactive.capstone.domain;
+package com.reactive.capstone.integration;
 
 import lombok.Data;
 
